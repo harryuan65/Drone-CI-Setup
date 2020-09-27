@@ -1,4 +1,7 @@
-# Setup
+# Drone CI
+## Description
+version=1.0
+## Setup
 ## Way1: Via docker run
 ```
 docker pull drone/drone:1
@@ -107,3 +110,5 @@ services:
 Then you can navigate to my_raw_host_url and setup repos
 ### References
 [EnvVarsInYml](https://stackoverflow.com/questions/29377853/how-to-use-environment-variables-in-docker-compose)
+
+[Load Dotenv When Running bash](https://gist.github.com/mihow/9c7f559807069a03e302605691f85572)
