@@ -1,4 +1,4 @@
-# Drone CI
+# Drone CI Fast Setup
 ## Description
 version=1.0
 ## Setup
@@ -38,7 +38,7 @@ docker run -d \
   --name runner \
   drone/drone-runner-docker:1
 ```
-## Via docker-compose and raw env
+## Way2: Via docker-compose and raw env
 1. `docker-compose.yml`
 ```
 version: "3"
@@ -72,7 +72,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
 ```
 2. `docker-compose up`
-## Via docker-compose and template env
+## Way3: Via docker-compose and template env
 1. `docker-compose.yml`
 ```
 version: "3"
