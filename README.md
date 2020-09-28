@@ -1,6 +1,10 @@
 # Drone CI Fast Setup
 ## Description
 version=1.0
+## Prerequsites
+### Github Oauth Setup
+https://docs.drone.io/server/provider/github/
+
 ## Setup
 ## Way1: Via docker run
 ```
@@ -73,7 +77,8 @@ services:
 ```
 2. `docker-compose up`
 ## Way3: Via docker-compose and template env
-1. `docker-compose.yml`
+1. have `.env` in local
+2. `docker-compose.yml`
 ```
 version: "3"
 services:
