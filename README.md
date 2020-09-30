@@ -8,8 +8,8 @@ https://docs.drone.io/server/provider/github/
 ## Setup
 ## Way1: Via docker run
 ```
-docker pull drone/drone:1
-docker pull drone/drone-runner-docker:1
+docker pull drone/drone:1.9.1
+docker pull drone/drone-runner-docker:1.5.2
 ```
 ### Run drone server
 ```
@@ -25,7 +25,7 @@ docker run \
   --restart=always \
   --detach=true \
   --name=drone \
-  drone/drone:1
+  drone/drone:1.9.1
 ```
 
 ### Run runner
@@ -40,7 +40,7 @@ docker run -d \
   -p 3000:3000 \
   --restart always \
   --name runner \
-  drone/drone-runner-docker:1
+  drone/drone-runner-docker:1.5.2
 ```
 ## Way2: Via docker-compose and raw env
 1. `docker-compose.yml`
@@ -48,7 +48,7 @@ docker run -d \
 version: "3"
 services:
   server:
-    image: drone/drone:1
+    image: drone/drone:1.9.1
     ports:
       - 80:80
       - 443:443
@@ -62,7 +62,7 @@ services:
     volumes:
       - /private/var/lib/drone:/data
   docker_runner:
-    image: drone/drone-runner-docker:1
+    image: drone/drone-runner-docker:1.5.2
     environment:
       DRONE_RPC_SECRET: hohohoitssecret
       DRONE_RPC_HOST: my_raw_host_url
@@ -83,7 +83,7 @@ services:
 version: "3"
 services:
   server:
-    image: drone/drone:1
+    image: drone/drone:1.9.1
     ports:
       - 80:80
       - 443:443
@@ -97,7 +97,7 @@ services:
     volumes:
       - /private/var/lib/drone:/data
   docker_runner:
-    image: drone/drone-runner-docker:1
+    image: drone/drone-runner-docker:1.5.2
     environment:
       DRONE_RPC_SECRET: ${DRONE_RPC_SECRET}
       DRONE_RPC_HOST: ${DRONE_RPC_HOST}
