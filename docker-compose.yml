@@ -1,7 +1,7 @@
 version: "3"
 services:
   server:
-    image: drone/drone:1
+    image: drone/drone:1.9.1
     ports:
       - 80:80
       - 443:443
@@ -15,7 +15,7 @@ services:
     volumes:
       - /private/var/lib/drone:/data
   docker_runner:
-    image: drone/drone-runner-docker:1
+    image: drone/drone-runner-docker:1.5.2
     environment:
       DRONE_RPC_SECRET: ${DRONE_RPC_SECRET}
       DRONE_RPC_HOST: ${DRONE_RPC_HOST}
