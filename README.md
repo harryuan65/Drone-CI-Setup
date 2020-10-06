@@ -1,6 +1,8 @@
 # Drone CI Fast Setup
-## Description
-version=1.0
+## Version
+server=1.9.1
+runner-docker:1.5.2
+
 ## Prerequsites
 ### Github Oauth Setup
 https://docs.drone.io/server/provider/github/
