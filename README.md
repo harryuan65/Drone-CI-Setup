@@ -3,7 +3,7 @@
 server=1.9.1
 runner-docker:1.5.2
 
-## Prerequsites
+## Prerequisites
 ### Github Oauth Setup
 https://docs.drone.io/server/provider/github/
 
